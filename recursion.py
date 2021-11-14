@@ -22,7 +22,7 @@ def factorials(num):
         return 1
     else:
         return num* factorials(num-1)
-        
+
 # Fabonacci numbers in recursion
 # 'num' represents the element in faboncci series
 
@@ -32,3 +32,12 @@ def fabonacci(num):
         return num
     else:
         return fabonacci(num-1) + fabonacci(num-2)
+
+# sum of digits of a postive integer using recursion
+
+def sum(num):
+    assert num >=0 and int(num) == num,'Please the number should be an +VE Integer'
+    if num ==0:
+        return 0
+    else:
+        return int(num%10) + sum(int(num/10))
